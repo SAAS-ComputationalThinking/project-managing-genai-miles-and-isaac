@@ -19,18 +19,18 @@
     const ctx = canvas.getContext("2d");
 
     const bird = {
-        x: 50,
+        x: 300,
         y: canvas.height / 2,
         radius: 20,
         velocityY: 0,
-        gravity: 0.5
+        gravity: 1
     };
 
     const gravity = 0.3;
     const jumpStrength = -8;
     const pipeGap = 175;
     const pipeWidth = 75;
-    const pipeSpeed = 2;
+    const pipeSpeed = 4;
     let score = 0;
 
     let pipes = [];
