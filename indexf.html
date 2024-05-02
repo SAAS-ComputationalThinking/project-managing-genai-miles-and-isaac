@@ -1,20 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flappy Bird</title>
+<style>
+    canvas {
+        border: 1px solid black;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+<canvas id="gameCanvas" width="1000" height="500"></canvas>
 <script>
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
 
     const bird = {
-        x: 50,
+        x: 300,
         y: canvas.height / 2,
         radius: 20,
         velocityY: 0,
-        gravity: 0.5
+        gravity: .75
     };
 
     const gravity = 0.3;
     const jumpStrength = -8;
-    const pipeGap = 150;
-    const pipeWidth = 50;
-    const pipeSpeed = 2;
+    const pipeGap = 175;
+    const pipeWidth = 75;
+    const pipeSpeed = 4;
     let score = 0;
 
     let pipes = [];
